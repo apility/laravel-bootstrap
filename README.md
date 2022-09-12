@@ -124,7 +124,7 @@ The items can be either `Bootstrap\Models\Link` instances, associative arrays, o
 ### Navbar
 
 ```html
-<x-bs-navbar light bg="success" :links="[['href' => '/', 'title' => 'Home'], ['href' => '/articles', 'Articles']]" />
+<x-bs-navbar light variant="success" :links="[['href' => '/', 'title' => 'Home'], ['href' => '/articles', 'Articles']]" />
 ```
 
 #### Attributes
