@@ -10,11 +10,16 @@ abstract class Component extends BaseComponent
 
     public function __construct()
     {
-        $this->prefix = 'bs5:' . md5(uniqid());
+        $this->prefix = config('bootstrap.prefix') . ':' . md5(uniqid());
     }
 
     public function render()
     {
         return view('bootstrap::navbar');
+    }
+
+    public function resolveComponent($name): string
+    {
+        return $this->prefix . '-' . $name;
     }
 }

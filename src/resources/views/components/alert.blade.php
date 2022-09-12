@@ -1,4 +1,4 @@
-<div class="alert {{ $color ? "alert-$color" : null }} {{ $dismissible ? 'alert-dismissible' : null }} {{ $fade ? 'fade' : null }} {{ $show ? 'show' : null }} {{ $attributes->get('class') }}"
+<div class="alert {{ $variant ? "alert-$variant" : null }} {{ $dismissible ? 'alert-dismissible' : null }} {{ $fade ? 'fade' : null }} {{ $show ? 'show' : null }} {{ $attributes->get('class') }}"
     role="alert" {{ $attributes->except('class') }}>
     {{ $slot }}
     @if ($dismissible)

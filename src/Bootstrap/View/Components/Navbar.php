@@ -9,15 +9,15 @@ class Navbar extends Component
     /** @var Link[] */
     public $links;
 
-    public $bg;
+    public $variant;
     public $dark;
     public $light;
 
-    public function __construct($links = [], $dark = false, $light = false, $bg = 'primary')
+    public function __construct($links = [], $dark = false, $light = false, $variant = 'primary')
     {
         parent::__construct();
         $this->links = $links;
-        $this->bg = $bg;
+        $this->variant = $variant;
         $this->dark = $dark;
         $this->light = $light;
     }

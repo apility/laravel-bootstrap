@@ -2,11 +2,11 @@
     <input class="form-control me-2" name="query" type="search" placeholder="{{ $placeholder }}"
         aria-label="{{ $placeholder }}">
 
-    <button class="btn btn-outline-success" type="submit">
+    <x-component :component="$resolveComponent('button')" color="success" outline type="submit">
         @if (!$slot->isEmpty())
             {{ $slot }}
         @else
             {{ $label }}
         @endisset
-</button>
+    </x-component>
 </form>

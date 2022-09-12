@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg {{ $bg ? "bg-$bg" : null }} {{ $dark ? 'navbar-dark' : null }} {{ $light ? 'navbar-light' : null }} {{ $attributes->get('class') }}"
+<nav class="navbar navbar-expand-lg {{ $variant ? "bg-$variant" : null }} {{ $dark ? 'navbar-dark' : null }} {{ $light ? 'navbar-light' : null }} {{ $attributes->get('class') }}"
     {{ $attributes->except('class') }}>
     <div class="container-fluid">
         @isset($brand)

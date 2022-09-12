@@ -4,15 +4,15 @@ namespace Bootstrap\View\Components;
 
 class Alert extends Component
 {
-    public $color;
+    public $variant;
     public $dismissible;
     public $fade;
     public $show;
 
-    public function __construct($color = 'primary', $dismissible = false, $fade = true, $show = true)
+    public function __construct($variant = 'primary', $dismissible = false, $fade = true, $show = true)
     {
         parent::__construct();
-        $this->color = $color;
+        $this->variant = $variant;
         $this->dismissible = $dismissible;
         $this->fade = $fade;
         $this->show = $show;

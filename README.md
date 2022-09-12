@@ -16,6 +16,7 @@
     * [NavbarBrand](#navbar-brand)
     * [NavDropdown](#nav-dropdown)
     * [NavLink](#nav-link)
+    * [Search](#search)
 
 ## Installation
 
@@ -53,7 +54,7 @@ php artisan vendor:publish --provider="Bootstrap\Providers\BootstrapServiceProvi
 ### Alert
 
 ```html
-<x-bs-alert color="success" dismissible>
+<x-bs-alert variant="success" dismissible>
     Hello!
 </x-bs-alert>
 ```
@@ -62,7 +63,7 @@ php artisan vendor:publish --provider="Bootstrap\Providers\BootstrapServiceProvi
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| color | string | `primary` | The color of the alert. |
+| variant | string | `primary` | The color variant of the alert. |
 | dismissible | boolean | `false` | Whether the alert is dismissible. |
 | fade | boolean | `true` | Whether the alert should fade out. |
 | show | boolean | `true` | Whether the alert should be visible. |
@@ -78,7 +79,7 @@ php artisan vendor:publish --provider="Bootstrap\Providers\BootstrapServiceProvi
 ### Button
 
 ```html
-<x-bs-button color="primary" large href="#test">
+<x-bs-button variant="primary" large href="#test">
     Hello!
 </x-bs-button>
 ```
@@ -89,7 +90,7 @@ If the `href` attribute is set, the button will be rendered as an `<a>` element.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| color | string | `primary` | The color of the alert. |
+| variant | string | `primary` | The color variant of the alert. |
 | type | string | `null` | Sets the button type when used as a regular button, e.g. `submit` |
 | href | string | `null` | Sets the href attribute, and makes the button into a link |
 | outline | boolean | `false` | Whether the alert should appear outlined |
@@ -131,7 +132,7 @@ The items can be either `Bootstrap\Models\Link` instances, associative arrays, o
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | links | array | `[]` | Links to render, [see Nav](#nav) |
-| bg | string | `primary` | The background color of the navbar |
+| variant | string | `primary` | The background color variant of the navbar |
 | light | boolean | `false` | Whether the navbar content is light |
 | dark | boolean | `false` | Whether the navbar content is dark |
 

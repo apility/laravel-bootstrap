@@ -4,7 +4,7 @@ namespace Bootstrap\View\Components;
 
 class Button extends Component
 {
-    public $color;
+    public $variant;
     public $type;
     public $href;
     public $tag;
@@ -13,10 +13,10 @@ class Button extends Component
     public $small;
     public $disabled;
 
-    public function __construct($color = 'primary', $type = null, $href = null, $outline = false, $large = false, $small = false, $disabled = false)
+    public function __construct($variant = 'primary', $type = null, $href = null, $outline = false, $large = false, $small = false, $disabled = false)
     {
         parent::__construct();
-        $this->color = $color;
+        $this->variant = $variant;
         $this->type = $type;
         $this->tag = $href ? 'a' : 'button';
         $this->href = $href;
