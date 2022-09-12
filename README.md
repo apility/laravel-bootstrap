@@ -55,7 +55,7 @@ php artisan vendor:publish --provider="Bootstrap\Providers\BootstrapServiceProvi
 ```html
 <x-bs-alert color="success" dismissible>
     Hello!
-</x-alert>
+</x-bs-alert>
 ```
 
 #### Attributes
@@ -72,7 +72,7 @@ php artisan vendor:publish --provider="Bootstrap\Providers\BootstrapServiceProvi
 ```html
 <x-bs-alert-heading>
     Hello!
-</x-alert-heading>
+</x-bs-alert-heading>
 ```
 
 ### Button
