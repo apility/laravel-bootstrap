@@ -1,5 +1,8 @@
 # Bootstrap components for Laravel Blade
 
+![Packagist](https://img.shields.io/packagist/l/apility/laravel-blade)
+![Packagist package.json version](https://img.shields.io/packagist/v/apility/laravel-blade)
+
 ## Table of Contents
 
 * [Installation](#installation)
