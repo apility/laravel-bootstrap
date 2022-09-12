@@ -8,7 +8,6 @@ class Nav extends Component
 
     public function __construct($links = [])
     {
-        parent::__construct();
         $this->links = $links;
     }
 

@@ -11,7 +11,6 @@ class Alert extends Component
 
     public function __construct($variant = 'primary', $dismissible = false, $fade = true, $show = true)
     {
-        parent::__construct();
         $this->variant = $variant;
         $this->dismissible = $dismissible;
         $this->fade = $fade;

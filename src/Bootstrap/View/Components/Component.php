@@ -6,11 +6,14 @@ use Illuminate\View\Component as BaseComponent;
 
 abstract class Component extends BaseComponent
 {
-    public $prefix;
+    protected $componentId;
 
-    public function __construct()
+    public function prefix($name)
     {
-        $this->prefix = config('bootstrap.prefix', 'bs') . '-' . md5(uniqid());
+        $this->componentId = $this->componentId ?? md5(uniqid());
+        $prefix = config('bootstrap.prefix', 'bs');
+
+        return $prefix . '-' . $this->componentId . '-' . $name;
     }
 
     public function render()

@@ -15,7 +15,6 @@ class Navbar extends Component
 
     public function __construct($links = [], $dark = false, $light = false, $variant = 'primary')
     {
-        parent::__construct();
         $this->links = $links;
         $this->variant = $variant;
         $this->dark = $dark;

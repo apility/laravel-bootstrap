@@ -15,7 +15,6 @@ class Button extends Component
 
     public function __construct($variant = 'primary', $type = null, $href = null, $outline = false, $large = false, $small = false, $disabled = false)
     {
-        parent::__construct();
         $this->variant = $variant;
         $this->type = $type;
         $this->tag = $href ? 'a' : 'button';

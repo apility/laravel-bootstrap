@@ -10,7 +10,6 @@ class NavbarBrand extends Component
 
     public function __construct($href = '/')
     {
-        parent::__construct();
         $this->link = Link::make(['href' => $href]);
     }
 

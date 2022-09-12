@@ -14,7 +14,6 @@ class Search extends Component
      */
     public function __construct($action = '?', $method = 'GET', $placeholder = 'Search...', $label = 'Search')
     {
-        parent::__construct();
         $this->action = $action;
         $this->method = $method;
         $this->placeholder = $placeholder;

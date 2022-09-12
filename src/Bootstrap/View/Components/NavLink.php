@@ -13,7 +13,6 @@ class NavLink extends Component
      */
     public function __construct($link)
     {
-        parent::__construct();
         $this->link = Link::make($link);
     }
 
