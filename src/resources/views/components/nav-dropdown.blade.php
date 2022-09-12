@@ -1,4 +1,4 @@
-<a class="nav-link {{ !!$link->active ?: 'active' }} dropdown-toggle {{ {{ $attributes->get('class') }} }}" {{ !!$link->active ?: 'aria-current="page"' }}
+<a class="nav-link {{ !!$link->active ?: 'active' }} dropdown-toggle {{ $attributes->get('class') }}" {{ !!$link->active ?: 'aria-current="page"' }}
     href="{{ $link->href }}" id="{{ $attributes->has('id') ? $attributes->get('id') : $prefix('navbarDropdownMenuLink') }}" role="button" data-bs-toggle="dropdown"
     aria-expanded="false"
     {{ $attributes->except('class') }}
