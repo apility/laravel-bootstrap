@@ -1,9 +1,48 @@
 # Bootstrap components for Laravel Blade
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Configuration](#configuration)
+* [Customization](#customization)
+* [Components](#components)
+    * [Alert](#alert)
+    * [Button](#button)
+    * [Nav](#nav)
+    * [Navbar](#navbar)
+    * [NavbarBrand](#navbar-brand)
+    * [NavDropdown](#nav-dropdown)
+    * [NavLink](#nav-link)
+
 ## Installation
 
 ```bash
 composer require apility/bootstrap-blade
+```
+
+## Configuration
+
+To override the default configuration, you must first publish it
+
+```bash
+php artisan vendor:publish --provider="Bootstrap\Providers\BootstrapServiceProvider" --tag="config"
+```
+
+This will add a `bootstrap.php` file to your `config` directory.
+
+The only supported option you can configure currently, is the 'prefix' property. This changes the names of the components.
+The default prefix is `bs`, if you change it to e.g. `bootstrap` you will have to use the provided components like this:
+    
+```html
+<x-bootstrap-alert>...</x-bootstrap-alert>
+```
+
+## Customization
+
+To customize the provided component's views, you must first publish them
+
+```bash
+php artisan vendor:publish --provider="Bootstrap\Providers\BootstrapServiceProvider" --tag="views"
 ```
 
 ## Components
