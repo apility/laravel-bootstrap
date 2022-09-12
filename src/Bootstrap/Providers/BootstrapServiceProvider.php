@@ -15,6 +15,8 @@ class BootstrapServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__ . '/../../resources/views/components', 'bootstrap');
 
+        $this->mergeConfigFrom(__DIR__ . '/../../config/bootstrap.php', 'bootstrap');
+
         $this->publishes([
             __DIR__ . '/../../config/bootstrap.php' => base_path('config/bootstrap.php'),
         ], 'config');

@@ -10,7 +10,7 @@ abstract class Component extends BaseComponent
 
     public function __construct()
     {
-        $this->prefix = config('bootstrap.prefix') . ':' . md5(uniqid());
+        $this->prefix = config('bootstrap.prefix', 'bs') . ':' . md5(uniqid());
     }
 
     public function render()
