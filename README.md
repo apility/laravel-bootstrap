@@ -84,15 +84,6 @@ If the `href` attribute is set, the button will be rendered as an `<a>` element.
 
 #### Attributes
 
-    public $color;
-    public $type;
-    public $href;
-    public $tag;
-    public $outline;
-    public $large;
-    public $small;
-    public $disabled;
-
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | color | string | `primary` | The color of the alert. |
