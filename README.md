@@ -21,7 +21,7 @@
 ## Installation
 
 ```bash
-composer require apility/bootstrap-blade
+composer require apility/laravel-bootstrap
 ```
 
 ## Configuration
