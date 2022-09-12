@@ -91,7 +91,7 @@ If the `href` attribute is set, the button will be rendered as an `<a>` element.
 | --- | --- | --- | --- |
 | color | string | `primary` | The color of the alert. |
 | type | string | `null` | Sets the button type when used as a regular button, e.g. `submit` |
-| href | string | null | Sets the href attribute, and makes the button into a link |
+| href | string | `null` | Sets the href attribute, and makes the button into a link |
 | outline | boolean | `false` | Whether the alert should appear outlined |
 | large | boolean | `false` | Whether the alert should be large |
 | small | boolean | `false` | Whether the alert should be small |
