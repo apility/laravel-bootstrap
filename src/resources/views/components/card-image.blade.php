@@ -1,0 +1,1 @@
+<img src="{{ $src }}" class="card-img-{{ $placement }}" alt="{{ $alt }}" title="{{ $title }}">

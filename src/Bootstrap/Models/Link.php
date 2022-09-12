@@ -2,10 +2,12 @@
 
 namespace Bootstrap\Models;
 
-use Illuminate\Support\Collection;
+use Bootstrap\Concerns\ParsesProperties;
 
 final class Link
 {
+    use ParsesProperties;
+
     /** @var string|null */
     public $href;
 
@@ -26,12 +28,18 @@ final class Link
 
     private function __construct($data)
     {
-        $this->href = data_get($data, 'url', '#');
-        $this->title = data_get($data, 'title', '');
-        $this->target = data_get($data, 'target', '_self');
-        $this->active = (bool) data_get($data, 'active', false);
-        $this->disabled = (bool) data_get($data, 'disabled', false);
-        $this->children = collect(data_get($data, 'children', []));
+        if (is_string($data)) {
+            $data = ['url' => $data, 'title' => $data];
+        }
+
+        $this->parseProperties([
+            'href',
+            'title',
+            'target',
+            'active' => 'bool',
+            'disabled' => 'bool',
+            'collection' => 'children'
+        ], $data);
 
         if ($this->disabled) {
             $this->active = false;
@@ -39,12 +47,16 @@ final class Link
         }
     }
 
-    public static function make($data): Link
+    public static function make($data): ?Link
     {
-        if ($data instanceof Link) {
-            return $data;
+        if ($data) {
+            if ($data instanceof Link) {
+                return $data;
+            }
+
+            return new static($data);
         }
 
-        return new static($data);
+        return null;
     }
 }

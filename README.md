@@ -98,6 +98,58 @@ If the `href` attribute is set, the button will be rendered as an `<a>` element.
 | small | boolean | `false` | Whether the alert should be small |
 | disabled | boolean | `false` | Whether the alert is disabled |
 
+### Card Header
+
+```html
+<x-bs-card-header>
+    Card title!
+</x-bs-card-header>
+```
+
+### Card Image
+
+```html
+<x-bs-card-image src="https://via.placeholder.com/150x150" />
+```
+
+#### Attributes
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| src | string | `null` | The image source |
+| image | array | `null` | An associative array, or object containing 'src', 'title' and 'alt' properties |
+| placement | string  | `'top'` | The placement of the image, either `'top'` or `'bottom'` |
+
+### Card title
+
+```html
+<x-bs-card-title>
+    Card title!
+</x-bs-card-title>
+```
+
+### Card
+
+```html
+<x-bs-card 
+    header="Header"
+    title="Title"
+    image="https://via.placeholder.com/150"
+    :link="['href' => 'https://example.com', 'title' => 'Read more']"
+>
+    Card body text
+</x-bs-card>
+```
+
+#### Attributes
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| header | string | `null` | The header of the card |
+| title | string | `null` | The title of the card |
+| image | string | `null` | Either an image source url, or an associate array or object that can be used as an Image |
+| link | array | `null` | An associative array, or object containing 'href' and 'title' properties |
+
 ### Nav
 
 ```html

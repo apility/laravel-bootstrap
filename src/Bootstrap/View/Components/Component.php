@@ -23,6 +23,6 @@ abstract class Component extends BaseComponent
 
     public function resolveComponent($name): string
     {
-        return $this->prefix . '-' . $name;
+        return config('bootstrap.prefix', 'bs') . '-' . $name;
     }
 }
