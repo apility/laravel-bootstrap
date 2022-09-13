@@ -1,4 +1,4 @@
-<li class="{{ $attributes->get('class', 'nav-item') }}" {{ $attributes->except('class') }}>
+<li class="{{ $attributes->get('class', 'nav-item') }} {{ $link->children->count() ? 'dropdown' : null }}" {{ $attributes->except('class') }}>
     @if ($link->children->count())
         <x-bs-nav-dropdown :link="$link" />
     @else
