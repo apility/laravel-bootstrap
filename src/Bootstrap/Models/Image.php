@@ -18,7 +18,9 @@ final class Image
             $data = ['src' => $data];
         }
 
-        $this->parseProperties(['src', 'title', 'alt'], $data);
+        $this->src = $this->parseProperty('src', $data);
+        $this->title = $this->parseProperty('title', $data);
+        $this->alt = $this->parseProperty('alt', $data);
     }
 
     public static function make($data): ?Image

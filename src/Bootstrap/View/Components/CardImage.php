@@ -27,7 +27,11 @@ class CardImage extends Component
             $image = ['src' => $image];
         }
 
-        $this->parseProperties(['src', 'title', 'alt'], Image::make($image));
+        $image = Image::make($image);
+
+        $this->src = $this->parseProperty('src', $image);
+        $this->title = $this->parseProperty('title', $image);
+        $this->alt = $this->parseProperty('alt', $image);
     }
 
     public function render()

@@ -32,14 +32,13 @@ final class Link
             $data = ['url' => $data, 'title' => $data];
         }
 
-        $this->parseProperties([
-            'href',
-            'title',
-            'target',
-            'active' => 'bool',
-            'disabled' => 'bool',
-            'collection' => 'children'
-        ], $data);
+        $this->href = $this->parseProperty('href', $data) ?? $this->parseProperty('url', $data) ?? '#';
+        $this->title = $this->parseProperty('title', $data);
+        $this->target = $this->parseProperty('target', $data) ?? '_self';
+        $this->active = (bool) ($this->parseProperty('active', $data) ?? false);
+        $this->disabled = (bool) ($this->parseProperty('disabled', $data) ?? false);
+        $this->children = collect($this->parseProperty('children', $data) ?? []);
+        $this->alt = $this->parseProperty('alt', $data);
 
         if ($this->disabled) {
             $this->active = false;
